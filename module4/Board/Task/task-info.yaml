@@ -1,0 +1,42 @@
+type: edu
+files:
+  - name: src/board/Board.kt
+    visible: true
+    learner_created: false
+  - name: src/board/BoardImpl.kt
+    visible: true
+    placeholders:
+      - offset: 90
+        length: 6
+        placeholder_text: TODO()
+        initial_state:
+          length: 6
+          offset: 90
+        initialized_from_dependency: false
+        selected: false
+        status: Unchecked
+      - offset: 149
+        length: 6
+        placeholder_text: TODO()
+        initial_state:
+          length: 6
+          offset: 149
+        initialized_from_dependency: false
+        selected: false
+        status: Unchecked
+    learner_created: false
+  - name: test/board/TestGameBoard.kt
+    visible: true
+    learner_created: false
+  - name: test/board/TestSquareBoard.kt
+    visible: true
+    learner_created: false
+  - name: partId
+    visible: false
+    learner_created: false
+  - name: assignmentKey
+    visible: false
+    learner_created: false
+feedback_link: https://www.coursera.org/learn/kotlin-for-java-developers/programming/7fkLn/board/discussions
+status: Unchecked
+record: -1
