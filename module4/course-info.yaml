@@ -7,8 +7,5 @@ programming_language: Kotlin
 content:
   - Rationals
   - Board
-additional_files:
-  - name: build.gradle
-  - name: settings.gradle
 mode: Study
 yaml_version: 4
