@@ -6,23 +6,23 @@ files:
   - name: src/board/BoardImpl.kt
     visible: true
     placeholders:
-      - offset: 90
-        length: 6
+      - offset: 385
+        length: 1295
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 90
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
-      - offset: 149
-        length: 6
+      - offset: 1733
+        length: 1670
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 149
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
     learner_created: false
   - name: test/board/TestGameBoard.kt
@@ -39,4 +39,8 @@ files:
     learner_created: false
 feedback_link: https://www.coursera.org/learn/kotlin-for-java-developers/programming/7fkLn/board/discussions
 status: Unchecked
+feedback:
+  message: "Submission successful, please <a href=\"https://www.coursera.org/learn/kotlin-for-java-developers/programming/7fkLn/board/submission\"\
+    >check the status on Coursera</a>"
+  time: "Tue, 05 Aug 2025 13:24:31 UTC"
 record: -1
