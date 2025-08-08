@@ -41,7 +41,8 @@ class Game2048(private val initializer: Game2048Initializer<Int>) : Game {
  * Add a new value produced by 'initializer' to a specified cell in a board.
  */
 fun GameBoard<Int?>.addNewValue(initializer: Game2048Initializer<Int>) {
-    TODO()
+    val next = initializer.nextValue(this)
+    if (next != null) this[next.first] = next.second
 }
 
 /*
@@ -53,8 +54,20 @@ fun GameBoard<Int?>.addNewValue(initializer: Game2048Initializer<Int>) {
  * Return 'true' if the values were moved and 'false' otherwise.
  */
 fun GameBoard<Int?>.moveValuesInRowOrColumn(rowOrColumn: List<Cell>): Boolean {
-    TODO()
+    val values = rowOrColumn.map { this[it] }
+    val mergedValues = values.moveAndMergeEqual { it * 2 }
+
+    if (mergedValues.zip(values).all { it.first == it.second })
+        return false
+
+    rowOrColumn.forEach { this[it] = null }
+    mergedValues
+        .zip(rowOrColumn)
+        .forEach { (value, cell) -> this[cell] = value }
+
+    return true
 }
+
 
 /*
  * Update the values stored in a board,
@@ -64,5 +77,14 @@ fun GameBoard<Int?>.moveValuesInRowOrColumn(rowOrColumn: List<Cell>): Boolean {
  * Return 'true' if the values were moved and 'false' otherwise.
  */
 fun GameBoard<Int?>.moveValues(direction: Direction): Boolean {
-    TODO()
+    return when (direction) {
+        Direction.UP -> (1..this.width)
+            .map { moveValuesInRowOrColumn(this.getColumn(1..this.width, it)) }
+        Direction.DOWN -> (1..this.width)
+            .map { moveValuesInRowOrColumn(this.getColumn(1..this.width, it).reversed()) }
+        Direction.RIGHT -> (1..this.width)
+            .map { moveValuesInRowOrColumn(this.getRow(it, 1..this.width).reversed()) }
+        Direction.LEFT -> (1..this.width)
+            .map { moveValuesInRowOrColumn(this.getRow(it, 1..this.width)) }
+    }.any { it }
 }

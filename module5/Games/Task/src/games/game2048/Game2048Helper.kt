@@ -18,5 +18,11 @@ package games.game2048
  * You can find more examples in 'TestGame2048Helper'.
 */
 fun <T : Any> List<T?>.moveAndMergeEqual(merge: (T) -> T): List<T> =
-        TODO()
-
+        this.filterNotNull()
+                .fold(emptyList()) { merged, item ->
+                        // If an already merged "last" matches the next item,
+                        // do we merge it too? Test cases don't indicate.
+                        val last = merged.lastOrNull()
+                        if (last === item) merged.dropLast(1).plus(merge(last))
+                        else merged.plus(item)
+                }
