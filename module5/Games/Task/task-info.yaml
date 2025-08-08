@@ -88,34 +88,34 @@ files:
   - name: src/games/gameOfFifteen/GameOfFifteen.kt
     visible: true
     placeholders:
-      - offset: 385
-        length: 6
+      - offset: 1911
+        length: 0
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 385
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
     learner_created: false
   - name: src/games/gameOfFifteen/GameOfFifteenHelper.kt
     visible: true
     placeholders:
-      - offset: 480
-        length: 6
+      - offset: 1168
+        length: 0
         placeholder_text: TODO()
         initial_state:
           length: 6
           offset: 480
         initialized_from_dependency: false
-        selected: false
+        selected: true
         status: Unchecked
     learner_created: false
   - name: src/games/gameOfFifteen/GameOfFifteenInitializer.kt
     visible: true
     placeholders:
-      - offset: 576
-        length: 6
+      - offset: 786
+        length: 0
         placeholder_text: TODO()
         initial_state:
           length: 6
@@ -177,4 +177,8 @@ files:
     learner_created: false
 feedback_link: https://www.coursera.org/learn/kotlin-for-java-developers/programming/NSid0/game-2048-game-of-fifteen/discussions
 status: Unchecked
+feedback:
+  message: "Submission successful, please <a href=\"https://www.coursera.org/learn/kotlin-for-java-developers/programming/NSid0/game-2048-game-of-fifteen/submission\"\
+    >check the status on Coursera</a>"
+  time: "Fri, 08 Aug 2025 12:16:11 UTC"
 record: -1
